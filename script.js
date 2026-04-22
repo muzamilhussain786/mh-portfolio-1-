@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             setTimeout(() => {
                 btn.textContent = 'Vision Sent Successfully!';
-                btn.style.backgroundColor = '#28a745';
+                btn.style.backgroundColor = 'var(--clr-accent)';
                 btn.style.color = '#fff';
                 contactForm.reset();
                 
