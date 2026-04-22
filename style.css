@@ -14,9 +14,10 @@
     --clr-line: #27272A;
     --clr-glass: rgba(24, 24, 27, 0.7);
     
-    /* Typography */
-    --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --ff-display: 'Arial Black', sans-serif;
+    /* Typography - Expert Hierarchy */
+    --ff-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --ff-display: 'Syne', sans-serif;
+    --ff-mono: 'JetBrains Mono', monospace;
     
     /* Spacing & Transitions */
     --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
@@ -40,6 +41,7 @@ body {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     -webkit-font-smoothing: antialiased;
+    font-weight: 500; /* Jakarta looks best at medium weight */
 }
 
 .bg-dark { background-color: var(--clr-dark); }
@@ -62,7 +64,8 @@ body {
 .location-tag {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 10px;
+    font-family: var(--ff-mono);
+    font-size: 9px;
     letter-spacing: 4px;
     color: var(--clr-muted);
     position: fixed;
@@ -110,8 +113,9 @@ body {
 
 .nav-logo {
     font-family: var(--ff-display);
+    font-weight: 800;
     font-size: 1rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--clr-light);
     text-transform: uppercase;
 }
@@ -172,9 +176,10 @@ body {
 
 .hero-title {
     font-family: var(--ff-display);
-    font-size: clamp(3rem, 12vw, 120px);
-    line-height: 0.95;
-    letter-spacing: -4px;
+    font-size: clamp(3rem, 12vw, 130px);
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
     text-transform: uppercase;
     margin-bottom: 32px;
     color: var(--clr-light);
@@ -192,26 +197,30 @@ body {
 
 /* Sections & Bento Grid Philosophy */
 .section-title {
-    font-family: var(--ff-display);
-    font-size: 12px;
+    font-family: var(--ff-mono);
+    font-size: 10px;
     text-transform: uppercase;
     color: var(--clr-accent);
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-bottom: 16px;
+    font-weight: 600;
 }
 
 h2.hero-title-sm {
     font-family: var(--ff-display);
+    font-weight: 800;
     font-size: clamp(2rem, 5vw, 64px);
     line-height: 1;
     letter-spacing: -2px;
 }
 
 h3 {
-    font-size: 24px;
+    font-family: var(--ff-sans);
+    font-size: 22px;
     font-weight: 700;
     margin-bottom: 12px;
     color: var(--clr-light);
+    letter-spacing: -0.5px;
 }
 
 /* Highlights Grid - Bento Grid Style */
@@ -244,7 +253,8 @@ h3 {
 
 .highlight-val {
     font-family: var(--ff-display);
-    font-size: 56px;
+    font-weight: 800;
+    font-size: 64px;
     color: var(--clr-light);
     line-height: 1;
     margin-bottom: 12px;
@@ -254,7 +264,8 @@ h3 {
 }
 
 .highlight-label {
-    font-size: 12px;
+    font-family: var(--ff-mono);
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--clr-muted);
@@ -306,6 +317,13 @@ h3 {
     background: var(--clr-secondary);
 }
 
+.project-info h3 {
+    font-family: var(--ff-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
 .project-info p {
     color: var(--clr-muted);
     font-size: 14px;
@@ -335,6 +353,21 @@ h3 {
 
 .initiative-item:hover {
     border-color: var(--clr-accent);
+}
+
+.initiative-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.initiative-date {
+    font-family: var(--ff-mono);
+    font-size: 10px;
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Skills Badges - Deep Surfaces */
